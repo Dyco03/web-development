@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du Produit</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product-details.css">
+</head>
+<body>
+    <section id="header">
+        <a href="index.html"><img src="img/logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag">
+                    <a href="cart.html">
+                        <i class="fa fa-shopping-bag" aria-hidden="true" id="shop"></i>
+                        <span id="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Conteneur pour afficher les détails du produit -->
+    <div id="product-detail-container"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Récupère les paramètres de l'URL (notamment l'ID du produit)
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+
+            // Charge les produits depuis le fichier JSON
+            fetch("products.json")
+                .then(response => response.json())
+                .then(products => {
+                    // Trouve le produit correspondant à l'ID récupéré
+                    const product = products.find(p => p.id === productId);
+                    if (product) {
+                        // Affiche les détails du produit
+                        displayProductDetails(product);
+                    }
+                });
+
+            // Fonction pour afficher les détails d'un produit
+            function displayProductDetails(product) {
+                const productDetailContainer = document.getElementById('product-detail-container');
+                // Génère les étoiles de notation
+                const ratingStars = Array(product.rating).fill('<i class="fas fa-star"></i>').join('');
+
+                productDetailContainer.innerHTML = `
+                    <div class="product-detail">
+                        <img src="${product.imgSrc}" alt="${product.name}">
+                        <div class="product-info">
+                            <h1>${product.name}</h1>
+                            <p>${product.brand}</p>
+                            <div class="star">${ratingStars}</div>
+                            <h4>$${product.price}</h4>
+                            <p>${product.description}</p>
+                            <button class="add-to-cart" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-img="${product.imgSrc}">Add to Cart</button>
+                        </div>
+                    </div>
+                `;
+
+                // Ajoute un écouteur d'événement au bouton "Add to Cart"
+                const addToCartButton = productDetailContainer.querySelector('.add-to-cart');
+                addToCartButton.addEventListener('click', addToCart);
+            }
+
+            // Fonction pour ajouter un produit au panier
+            function addToCart(event) {
+                const button = event.target;
+                const productId = button.getAttribute('data-id');
+                const productName = button.getAttribute('data-name');
+                const productPrice = button.getAttribute('data-price');
+                const productImg = button.getAttribute('data-img');
+
+                // Crée un objet représentant le produit à ajouter au panier
+                const cartItem = {
+                    id: productId,
+                    name: productName,
+                    price: parseFloat(productPrice),
+                    img: productImg,
+                    quantity: 1
+                };
+
+                // Récupère le panier depuis le localstorage ou initialise un nouveau panier
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const existingItem = cart.find(item => item.id === productId);
+                if (existingItem) {
+                    // Incrémente la quantité si le produit est déjà dans le panier
+                    existingItem.quantity += 1;
+                } else {
+                    // Ajoute le produit au panier s'il n'est pas déjà présent
+                    cart.push(cartItem);
+                }
+
+                // Met à jour le panier dans le stockage local
+                localStorage.setItem('cart', JSON.stringify(cart));
+                alert(`${productName} a été ajouté au panier.`);
+            }
+        });
+    </script>
+
+<footer class="section-p1">
+    <div class="col">
+        <img class="logo" src="img/logo.png" alt="">
+        <h4>Contact</h4>
+        <p><strong>Address :</strong> Antananarivo</p>
+        <p><strong>Phone :</strong> 0321832918</p>
+        <p><strong>Hours :</strong> h24</p>
+        <div class="follow">
+            <h4>Follow Us</h4>
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest-p"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <h4>About</h4>
+        <a href="#">About US</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Contact Us</a>
+        <a href="#">About US</a>
+    </div>
+
+    <div class="col">
+        <h4>MY Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+    </div>
+
+   </footer>    
+
+   <script src="cartCount.js"></script>
+</body>
+</html>

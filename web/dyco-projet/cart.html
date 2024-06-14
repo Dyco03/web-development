@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart - Ecommerce Website</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Style pour le bouton "Commander" */
+        .checkout-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+
+        .checkout-button:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+  <section id="header">
+    <a href="index.html"><img src="img/logo.png" class="logo" alt=""></a>
+    <div>
+        <ul id="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li id="lg-bag">
+                <a href="cart.html">
+                    <i class="fa fa-shopping-bag" aria-hidden="true" id="shop"></i>
+                    <span id="cart-count">0</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+    <div class="small-container cart-page">
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+            </tr>
+            <tbody id="cart-items">
+                <!-- Les articles du panier seront générés ici -->
+            </tbody>
+        </table>
+
+        <div class="total-price">
+            <table>
+                <tr>
+                    <td>Subtotal</td>
+                    <td id="subtotal">$0.00</td>
+                </tr>
+                <tr>
+                    <td>Tax</td>
+                    <td id="tax">$0.00</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td id="total">$0.00</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Bouton Commander -->
+        <button class="checkout-button">Commander</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            loadCartItems();
+
+            function loadCartItems() {
+                const cartItemsContainer = document.getElementById('cart-items');
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cartItemsContainer.innerHTML = '';
+
+                let subtotal = 0;
+                cart.forEach(item => {
+                    subtotal += item.price * item.quantity;
+                    const cartItemRow = document.createElement('tr');
+                    cartItemRow.innerHTML = `
+                        <td>
+                            <div class="cart-info">
+                                <img src="${item.img}" alt="${item.name}">
+                                <div>
+                                    <p>${item.name}</p>
+                                    <small>Price: $${item.price}</small>
+                                    <br />
+                                    <button class="remove-btn" data-id="${item.id}">Remove</button>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input type="number" value="${item.quantity}" class="quantity-input" data-id="${item.id}"></td>
+                        <td>$${(item.price * item.quantity).toFixed(2)}</td>
+                    `;
+                    cartItemsContainer.appendChild(cartItemRow);
+                });
+
+                const tax = subtotal * 0.1; // 10% tax
+                const total = subtotal + tax;
+
+                document.getElementById('subtotal').innerText = `$${subtotal.toFixed(2)}`;
+                document.getElementById('tax').innerText = `$${tax.toFixed(2)}`;
+                document.getElementById('total').innerText = `$${total.toFixed(2)}`;
+
+                // Ajoute les écouteurs d'événements pour les boutons "Remove"
+                const removeButtons = document.querySelectorAll('.remove-btn');
+                removeButtons.forEach(button => {
+                    button.addEventListener('click', removeFromCart);
+                });
+
+                // Ajoute les écouteurs d'événements pour les champs de quantité
+                const quantityInputs = document.querySelectorAll('.quantity-input');
+                quantityInputs.forEach(input => {
+                    input.addEventListener('change', updateQuantity);
+                });
+            }
+
+            function removeFromCart(event) {
+                const button = event.target;
+                const productId = button.getAttribute('data-id');
+
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart = cart.filter(item => item.id !== productId);
+
+                localStorage.setItem('cart', JSON.stringify(cart));
+                loadCartItems();
+            }
+
+            function updateQuantity(event) {
+                const input = event.target;
+                const productId = input.getAttribute('data-id');
+                const newQuantity = parseInt(input.value);
+
+                if (newQuantity <= 0) return;
+
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const cartItem = cart.find(item => item.id === productId);
+                if (cartItem) {
+                    cartItem.quantity = newQuantity;
+                }
+
+                localStorage.setItem('cart', JSON.stringify(cart));
+                loadCartItems();
+            }
+        });
+    </script>
+    <script src="cartCount.js"></script>
+</body>
+</html>

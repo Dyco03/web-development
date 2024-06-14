@@ -1,0 +1,299 @@
+[
+    {
+        "id": "1",
+        "imgSrc": "img/products/f1.jpg",
+        "brand": "Processeur",
+        "name": "i9-13900k",
+        "price": 700,
+        "rating": 5,
+        "description": "Le processeur i9-13900k offre des performances exceptionnelles pour les joueurs les plus exigeants, offrant une expérience de jeu fluide et rapide."
+    },
+    {
+        "id": "2",
+        "imgSrc": "img/products/f3.jpg",
+        "brand": "PACK GAMING",
+        "name": "Pack i9",
+        "price": 1850,
+        "rating": 5,
+        "description": "Le pack i9 est un ensemble de matériel de gaming haut de gamme, comprenant un processeur i9 puissant et d'autres composants essentiels pour une expérience de jeu fluide et immersive. Avec ce pack, vous pouvez profiter des jeux les plus exigeants avec des performances optimales."
+    },
+    {
+        "id": "3",
+        "imgSrc": "img/products/6.png",
+        "brand": "Casque Gaming",
+        "name": "Microphone Advance Spirit of Gamer XPERT-H2",
+        "price": 145,
+        "rating": 5,
+        "description": "Le casque gaming Microphone Advance Spirit of Gamer XPERT-H2 offre un son immersif et un microphone de qualité pour une communication claire avec vos coéquipiers."
+    },
+    {
+        "id": "4",
+        "imgSrc": "img/products/5.png",
+        "brand": "Carte Graphique Msi",
+        "name": "rx 590",
+        "price": 180,
+        "rating": 5,
+        "description": "La carte graphique MSI rx 590 offre des performances graphiques exceptionnelles, vous permettant de jouer aux derniers jeux avec des détails incroyables et des fréquences d'images élevées."
+    },
+    {
+        "id": "5",
+        "imgSrc": "img/products/7.png",
+        "brand": "Souris Gaming",
+        "name": "Logitech G403 Prodigy",
+        "price": 50,
+        "rating": 5,
+        "description": "La souris gaming Logitech G403 Prodigy offre une précision exceptionnelle et un confort optimal pour des heures de jeu sans fatigue."
+    },
+    {
+        "id": "6",
+        "imgSrc": "img/products/8.png",
+        "brand": "Tapis Souris Gaming",
+        "name": "Razer Firefly rétro-éclairé noir",
+        "price": 30,
+        "rating": 5,
+        "description": "Le tapis de souris gaming Razer Firefly rétro-éclairé noir offre une surface lisse et un éclairage RGB personnalisable pour une expérience de jeu immersive."
+    },
+    {
+        "id": "7",
+        "imgSrc": "img/products/9.png",
+        "brand": "Unité d'alimentation",
+        "name": "80 Plus EVGA 500B Alimentation",
+        "price": 180,
+        "rating": 5,
+        "description": "L'unité d'alimentation 80 Plus EVGA 500B garantit une alimentation stable et fiable pour votre configuration de jeu, assurant des performances optimales."
+    },
+    {
+        "id": "8",
+        "imgSrc": "img/products/10.png",
+        "brand": "Ventirad",
+        "name": "Cooler Master",
+        "price": 100,
+        "rating": 5,
+        "description": "Le ventirad Cooler Master assure un refroidissement efficace de votre processeur, permettant des sessions de jeu prolongées sans surchauffe."
+    },
+    {
+        "id": "9",
+        "imgSrc": "img/products/8.jpg",
+        "brand": "PC GAMER",
+        "name": "Rizen 5x",
+        "price": 900,
+        "rating": 5,
+        "description": "Le PC gamer Rizen 5x offre des performances exceptionnelles pour les jeux les plus exigeants, avec un processeur Ryzen et une carte graphique puissante."
+    },
+    {
+        "id": "10",
+        "imgSrc": "img/products/13.png",
+        "brand": "LAPTOP",
+        "name": "Rog strix GL503 Intel Core i7",
+        "price": 900,
+        "rating": 5,
+        "description": "Le laptop Rog Strix GL503 avec processeur Intel Core i7 offre des performances de jeu impressionnantes dans un format portable, vous permettant de jouer où que vous soyez."
+    },
+    {
+        "id": "11",
+        "imgSrc": "img/products/4.jpg",
+        "brand": "PC GAMER",
+        "name": "AMD core 7",
+        "price": 899,
+        "rating": 5,
+        "description": "Le PC gamer AMD Core 7 offre des performances de jeu exceptionnelles avec un processeur AMD et une carte graphique puissante, le tout dans un design élégant."
+    },
+    {
+        "id": "12",
+        "imgSrc": "img/products/3.jpg",
+        "brand": "PC GAMER",
+        "name": "Rizen 7x",
+        "price": 1050,
+        "rating": 5,
+        "description": "Le PC gamer Rizen 7x est conçu pour les joueurs passionnés, offrant des performances de pointe avec un processeur Ryzen 7 et une carte graphique haut de gamme."
+    },
+    {
+        "id": "13",
+        "imgSrc": "img/products/2.jpg",
+        "brand": "PC GAMER",
+        "name": "Rizen 5x",
+        "price": 899,
+        "rating": 5,
+        "description": "Le PC gamer Rizen 5x est idéal pour les joueurs à la recherche de performances solides à un prix abordable, avec un processeur Ryzen et une carte graphique performante."
+    },
+    {
+        "id": "14",
+        "imgSrc": "img/products/6.jpg",
+        "brand": "Clavier",
+        "name": "Touche mécanique",
+        "price": 95,
+        "rating": 5,
+        "description": "Le clavier avec touches mécaniques offre une expérience de frappe réactive et précise, idéale pour les jeux exigeants."
+    },
+    {
+        "id": "15",
+        "imgSrc": "img/products/5.jpg",
+        "brand": "Rizen 5x",
+        "name": "PC GAMER",
+        "price": 789,
+        "rating": 5,
+        "description": "Le PC gamer Rizen 5x offre des performances solides à un prix abordable, avec un processeur Ryzen et une carte graphique performante pour des heures de jeu sans compromis."
+    },
+    {
+        "id": "16",
+        "imgSrc": "img/products/7.jpg",
+        "brand": "Ecran PC",
+        "name": "24\" Full HD",
+        "price": 300,
+        "rating": 5,
+        "description": "L'écran PC 24\" Full HD offre des images nettes et détaillées, idéal pour une expérience de jeu immersive."
+    },
+    {
+        "id": "17",
+        "imgSrc": "img/products/9.jpg",
+        "brand": "Carte Graphique",
+        "name": "RTX 4090ti",
+        "price": 260,
+        "rating": 5,
+        "description": "La carte graphique RTX 4090ti offre des performances graphiques de pointe, permettant de jouer aux derniers jeux avec des graphismes époustouflants et des fréquences d'images élevées."
+    },
+    {
+        "id": "18",
+        "imgSrc": "img/products/2.png",
+        "brand": "Processeur",
+        "name": "i7 7770k",
+        "price": 150,
+        "rating": 5,
+        "description": "Le processeur i7 7770k offre des performances exceptionnelles pour les jeux et les tâches multitâches, garantissant une expérience fluide et réactive."
+    },
+    {
+        "id": "19",
+        "imgSrc": "img/products/1.png",
+        "brand": "Carte Mère",
+        "name": "LGA 2066",
+        "price": 450,
+        "rating": 5,
+        "description": "La carte mère LGA 2066 offre une compatibilité et des performances de pointe pour votre configuration de jeu, assurant une stabilité et une fiabilité maximales."
+    },
+    {
+        "id": "20",
+        "imgSrc": "img/products/f2.jpg",
+        "brand": "Console",
+        "name": "PS4 FAT",
+        "price": 200,
+        "rating": 5,
+        "description": "La console PS4 FAT offre une expérience de jeu exceptionnelle avec un vaste catalogue de jeux et une qualité de construction robuste."
+    },
+    {
+        "id": "21",
+        "imgSrc": "img/products/12.png",
+        "brand": "Console",
+        "name": "PS4 PRO",
+        "price": 300,
+        "rating": 5,
+        "description": "La console PS4 PRO offre des performances de jeu améliorées avec une résolution 4K et une compatibilité HDR, vous permettant de profiter des jeux dans toute leur splendeur."
+    },
+    {
+        "id": "22",
+        "imgSrc": "img/products/3.png",
+        "brand": "Manette",
+        "name": "XBOX ONE",
+        "price": 45,
+        "rating": 5,
+        "description": "La manette Xbox One offre une prise en main confortable et une réactivité exceptionnelle pour une expérience de jeu immersive."
+    },
+    {
+        "id": "23",
+        "imgSrc": "img/products/4.png",
+        "brand": "Manette",
+        "name": "PS4 edition fortnite",
+        "price": 40,
+        "rating": 5,
+        "description": "La manette PS4 édition Fortnite offre un design unique et une prise en main confortable pour des heures de jeu sans fatigue."
+    },
+    {
+        "id": "24",
+        "imgSrc": "img/products/11.png",
+        "brand": "Console Portable",
+        "name": "Nintendo Switch",
+        "price": 450,
+        "rating": 5,
+        "description": "La console portable Nintendo Switch offre une expérience de jeu polyvalente, que ce soit en mode portable ou sur grand écran, avec une bibliothèque de jeux impressionnante."
+    },
+    {
+        "id": "25",
+        "imgSrc": "img/products/14.png",
+        "brand": "Console",
+        "name": "PS5 version digital",
+        "price": 550,
+        "rating": 5,
+        "description": "La PS5 version digitale est la console de nouvelle génération de Sony, offrant des performances de pointe et une expérience de jeu immersive. Avec son design élégant et ses fonctionnalités avancées, cette console vous permet de télécharger et de jouer à vos jeux préférés en quelques instants, sans avoir besoin de disques physiques."
+    },
+    {
+        "id": "26",
+        "imgSrc": "img/products/15.png",
+        "brand": "PACK GAMING",
+        "name": "pack i7",
+        "price": 1500,
+        "rating": 5,
+        "description": "Le pack i7 est un ensemble de matériel de gaming haut de gamme, comprenant un processeur i7 puissant et d'autres composants essentiels pour une expérience de jeu fluide et immersive. Avec ce pack, vous pouvez profiter des jeux les plus exigeants avec des performances optimales."
+    },
+    {
+        "id": "27",
+        "imgSrc": "img/products/16.png",
+        "brand": "Volant de jeu",
+        "name": "Logitech G29",
+        "price": 375,
+        "rating": 5,
+        "description": "Le volant de jeu Logitech G29 offre une expérience de conduite réaliste et immersive, avec des commandes précises et réactives. Que vous jouiez à des simulations de course ou à d'autres jeux de conduite, le G29 vous permet de ressentir chaque virage, chaque dérapage et chaque vibration de la route."
+    },
+    {
+        "id": "28",
+        "imgSrc": "img/products/17.png",
+        "brand": "Casque vr",
+        "name": "PS VR",
+        "price": 300,
+        "rating": 5,
+        "description": "Le PS VR est un casque de réalité virtuelle conçu pour la PlayStation, offrant une expérience de jeu totalement immersive. Plongez dans des mondes virtuels époustouflants, explorez des environnements fantastiques et vivez des aventures inoubliables avec le PS VR."
+    },
+    {
+        "id": "29",
+        "imgSrc": "img/products/18.png",
+        "brand": "Manette",
+        "name": "Nunchuck switch",
+        "price": 50,
+        "rating": 5,
+        "description": "Le Nunchuck Switch est une manette complémentaire pour la console Nintendo Switch, offrant des contrôles supplémentaires pour une variété de jeux. Compact et ergonomique, le Nunchuck est idéal pour les jeux de combat, d'action et de plateforme sur la Switch."
+    },
+    {
+        "id": "30",
+        "imgSrc": "img/products/19.png",
+        "brand": "Console",
+        "name": "XBOX ONE FAT",
+        "price": 250,
+        "rating": 5,
+        "description": "La Xbox One FAT est une console de jeu polyvalente, offrant des performances de jeu de haute qualité et une large gamme de fonctionnalités multimédias. Avec son vaste catalogue de jeux et ses options de divertissement variées, la Xbox One FAT est parfaite pour les joueurs de tous âges."
+    },
+    {
+        "id": "31",
+        "imgSrc": "img/products/20.png",
+        "brand": "Chaise de jeu",
+        "name": "Chaise de jeu DXRacer ",
+        "price": 450,
+        "rating": 5,
+        "description": "La chaise de jeu DXRacer est conçue pour offrir un confort optimal pendant de longues sessions de jeu. Avec son design ergonomique, son soutien lombaire réglable et ses accoudoirs rembourrés, la DXRacer vous permet de rester concentré et à l'aise pendant que vous jouez."
+    },
+    {
+        "id": "32",
+        "imgSrc": "img/products/21.png",
+        "brand": "Mémoire RAM",
+        "name": "RAM 16gb Corsaire Ddr4 2666mhz",
+        "price": 150,
+        "rating": 5,
+        "description": "La mémoire RAM Corsaire DDR4 2666MHz offre des performances fiables et rapides pour votre système. Avec sa vitesse élevée et sa capacité généreuse, cette RAM est idéale pour les jeux, la création de contenu et les tâches multitâches intensives."
+    },
+    {
+        "id": "33",
+        "imgSrc": "img/products/22.png",
+        "brand": "SSD",
+        "name": "SSD 960 EVO NVMe M.2 1TB",
+        "price": 400,
+        "rating": 5,
+        "description": "Le SSD 960 EVO NVMe M.2 1TB offre des vitesses de lecture et d'écriture ultra-rapides, ce qui en fait une solution de stockage idéale pour les jeux, les applications et les fichiers volumineux. Avec sa technologie NVMe avancée, ce SSD offre des performances exceptionnelles pour une expérience informatique fluide et réactive."
+    }
+]
